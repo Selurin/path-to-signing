@@ -7,6 +7,7 @@ def read_tree_from_file(filename):
         raise FileNotFoundError(f"Файл {filename} не найден!")
 
     officials = {}
+    #original_names = {}
     root = None
     
     with open(filename, 'r', encoding='utf-8') as f:
@@ -31,22 +32,26 @@ def read_tree_from_file(filename):
             continue
             
         boss_name = parts[2]
+
+        name_lower = name.lower()
         
-        if name not in officials:
-            officials[name] = Official(name, bribe)
+        if name_lower not in officials:
+            officials[name_lower] = Official(name, bribe)
         else:
-            officials[name].bribe = bribe
+            officials[name_lower].bribe = bribe
             
         if boss_name == '-':
             root_count += 1
             if root_count > 1:
                 raise ValueError("В файле главный чиновник должен быть только один (с символом '-')")
-            root = officials[name]
+            root = officials[name_lower]
         else:
-            if boss_name not in officials:
-                officials[boss_name] = Official(boss_name, 0)
+            boss_name_lower = boss_name.lower()
+            if boss_name_lower not in officials:
+                officials[boss_name_lower] = Official(boss_name, 0)
+                #original_names[boss_name_lower] = boss_name
 
-            officials[boss_name].add_subordinate(officials[name])
+            officials[boss_name_lower].add_subordinate(officials[name_lower])
 
     if not officials:
         raise ValueError("Файл пуст или не содержит корректных данных")
