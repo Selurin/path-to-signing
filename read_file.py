@@ -21,7 +21,8 @@ def read_tree_from_file(filename):
         try:
             bribe = int(parts[1])
         except ValueError:
-            raise ValueError(f"Некорректная взятка у {name}")
+            print(f"Некорректная взятка у {name}")
+            continue
             
         boss_name = parts[2]
         
