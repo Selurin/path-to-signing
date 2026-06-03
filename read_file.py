@@ -12,6 +12,8 @@ def read_tree_from_file(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         lines = f.readlines()
         
+    root_count = 0
+    
     for line in lines:
         parts = line.strip().split()
         if len(parts) != 3:
@@ -32,6 +34,9 @@ def read_tree_from_file(filename):
             officials[name].bribe = bribe
             
         if boss_name == '-':
+            root_count += 1
+            if root_count > 1:
+                raise ValueError("В файле главный чиновник должен быть только один (с символом '-')")
             root = officials[name]
         else:
             if boss_name not in officials:
