@@ -1,0 +1,2 @@
+Sidorov 10 Petrov
+Petrov 20 Ivanov

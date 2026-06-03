@@ -1,0 +1,8 @@
+Ivanov 100 -
+Petrov 10 Ivanov
+Sidorov 40 Petrov
+Trifonov 10 Ivanov
+Sekirov 10 Trifonov
+Bezuhov 10 Sekirov
+Sergeev 10 Bezuhov
+Grigorev 10 Sergeev

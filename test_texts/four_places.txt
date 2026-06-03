@@ -1,0 +1,8 @@
+Ivanov 100 -
+Petrov Vlad 50 Ivanov
+Sidorova Inna 30 Ivanov
+Kuznetsova Elena 10 Petrov
+Smirnov 20 Sidorov
+Katerinin 400 Ivanov
+Wellmart 30 Katerinin
+Tellme Alfred 10

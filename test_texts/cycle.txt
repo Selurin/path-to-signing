@@ -1,0 +1,5 @@
+Ivanov 10 -
+Ivanov 1 Petrov
+Petrov 20 Ivanov
+Sidorov 30 Petrov
+Petrov 40 Sidorov

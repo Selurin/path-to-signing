@@ -1,0 +1,6 @@
+Bunin 100 -
+Petrov 50 Sidorov
+Zimni 30 Bunin
+Lenin 20 Bunin
+Bulka 5 Lenin
+Asekin 2 Petrov

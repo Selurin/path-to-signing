@@ -1,0 +1,4 @@
+Ivanov 100 -
+Petrov 0 Ivanov
+Sidorov 0 Ivanov
+Zimni 0 Petrov

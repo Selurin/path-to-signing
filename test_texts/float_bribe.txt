@@ -1,0 +1,5 @@
+Ivanov 100 -
+Petrov 50 Ivanov
+Sidorov 30.5 Ivanov
+Kuznetsov 10 Petrov
+Smirnov 20 Sidorov

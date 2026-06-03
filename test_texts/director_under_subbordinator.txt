@@ -1,0 +1,6 @@
+Petrov 50 Ivanov
+Wert 10 Petrov
+Kusaka 60 Wert
+Unin 10 Petrov
+Ivanov 100 -
+Dolly 40 Wert
