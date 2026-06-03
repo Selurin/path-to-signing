@@ -14,16 +14,20 @@ def read_tree_from_file(filename):
         
     root_count = 0
     
-    for line in lines:
+    for i, line in enumerate(lines, 1):
         parts = line.strip().split()
         if len(parts) != 3:
+            print(f'Недостает или слишком много данных в строке {i}. Пожалуйста, введите в формате "Фамилия взятка Начальник"')
             continue 
             
         name = parts[0]
         try:
             bribe = int(parts[1])
         except ValueError:
-            print(f"Некорректная взятка у {name}")
+            print(f"Некорректная взятка у {name} в строке {i}")
+            continue
+        if bribe < 0:
+            print(f"Некорректная взятка у {name} в строке {i}")
             continue
             
         boss_name = parts[2]
